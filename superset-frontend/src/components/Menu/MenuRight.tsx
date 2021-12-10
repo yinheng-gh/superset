@@ -107,7 +107,7 @@ const RightMenu = ({
           ))}
         </SubMenu>
       )}
-      <SubMenu title="Settings" icon={<Icons.TriangleDown iconSize="xl" />}>
+      <SubMenu title="设置" icon={<Icons.TriangleDown iconSize="xl" />}>
         {settings.map((section, index) => [
           <Menu.ItemGroup key={`${section.label}`} title={section.label}>
             {section.childs?.map(child => {
@@ -169,7 +169,8 @@ const RightMenu = ({
           </Menu.ItemGroup>,
         ]}
       </SubMenu>
-      {navbarRight.show_language_picker && (
+      {/* 将如下内容：navbarRight.show_language_picker   直接改为true */}
+      {true && (
         <LanguagePicker
           locale={navbarRight.locale}
           languages={navbarRight.languages}

@@ -70,6 +70,7 @@ const App = () => (
   <Router>
     <RootContextProviders>
       <Menu data={menu} isFrontendRoute={isFrontendRoute} />
+      {console.log('menu', menu)}
       <Switch>
         {routes.map(({ path, Component, props = {}, Fallback = Loading }) => (
           <Route path={path} key={path}>
